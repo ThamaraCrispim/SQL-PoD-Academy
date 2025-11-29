@@ -62,10 +62,10 @@ LIMIT 5;
 
 🔹 7. Tipos de Dados Numéricos
 
-- TINYINT, INT, BIGINT
-- FLOAT, DOUBLE, DECIMAL
-- Texto
-- CHAR
+-TINYINT, INT, BIGINT
+-FLOAT, DOUBLE, DECIMAL
+-Texto
+-CHAR
 -VARCHAR
 -TEXT
 -LONGTEXT
@@ -77,33 +77,27 @@ LIMIT 5;
 -YEAR
 
 🔹 8. Ordenação (ORDER BY)
+```SQL 
 SELECT placa, marca, ano
 FROM tbl_cadastro_veiculo
 ORDER BY ano DESC
 LIMIT 10;
 
-
-ASC → Crescente
-
-DESC → Decrescente
-
+-ASC → Crescente
+-DESC → Decrescente
 🔹 9. Operadores Essenciais
 Aritméticos
-
 + - * / %
-
 Comparação
-
 = != <> > < >= <=
 
 Lógicos
-
 AND OR NOT IN BETWEEN LIKE EXISTS
 
 🔹 10. Filtros (WHERE)
 
 Igualdade:
-
+```SQL
 SELECT * 
 FROM tbl_cadastro_veiculo
 WHERE marca = 'Fiat';
