@@ -1,5 +1,5 @@
 
-Resumo — SQL | Aula 1 (PoD Academy)
+##Resumo — SQL | Aula 1 (PoD Academy)
 A Aula 1 apresenta os fundamentos essenciais do SQL, explicando desde o que é a linguagem até como realizar as primeiras consultas, aplicar filtros, ordenar dados, utilizar funções de agregação e trabalhar com agrupamentos.
 
 🔹 1. O que é SQL?
@@ -52,3 +52,133 @@ Selecionar colunas específicas:
 SELECT placa, marca, ano
 FROM tbl_cadastro_veiculo
 LIMIT 5;
+
+Selecionar todas as colunas:
+
+```SQL
+SELECT * 
+FROM tbl_cadastro_veiculo 
+LIMIT 5;
+
+🔹 7. Tipos de Dados Numéricos
+
+- TINYINT, INT, BIGINT
+- FLOAT, DOUBLE, DECIMAL
+- Texto
+- CHAR
+-VARCHAR
+-TEXT
+-LONGTEXT
+-Datas
+-DATE
+-TIME
+-DATETIME
+-TIMESTAMP
+-YEAR
+
+🔹 8. Ordenação (ORDER BY)
+SELECT placa, marca, ano
+FROM tbl_cadastro_veiculo
+ORDER BY ano DESC
+LIMIT 10;
+
+
+ASC → Crescente
+
+DESC → Decrescente
+
+🔹 9. Operadores Essenciais
+Aritméticos
+
++ - * / %
+
+Comparação
+
+= != <> > < >= <=
+
+Lógicos
+
+AND OR NOT IN BETWEEN LIKE EXISTS
+
+🔹 10. Filtros (WHERE)
+
+Igualdade:
+
+SELECT * 
+FROM tbl_cadastro_veiculo
+WHERE marca = 'Fiat';
+
+
+AND:
+
+WHERE marca = 'Fiat' AND ano = 2023;
+
+
+OR:
+
+WHERE marca = 'Fiat' OR ano = 2023;
+
+
+LIKE:
+
+WHERE marca LIKE 'Aston%';
+
+
+IN:
+
+WHERE marca IN ('Fiat', 'Audi', 'Ferrari');
+
+
+BETWEEN:
+
+WHERE valor BETWEEN 2000000 AND 3000000;
+
+🔹 11. Funções de Agregação
+Função	Descrição
+MAX()	Maior valor
+MIN()	Menor valor
+AVG()	Média
+SUM()	Soma
+COUNT()	Contagem de registros
+
+Exemplo:
+
+SELECT MAX(valor_tabela_fipe)
+FROM tbl_cadastro_veiculo;
+
+🔹 12. Agrupamento (GROUP BY)
+SELECT marca, MAX(valor_tabela_fipe)
+FROM tbl_cadastro_veiculo
+GROUP BY marca;
+
+
+Múltiplas agregações:
+
+SELECT 
+    marca,
+    MAX(valor_tabela_fipe),
+    AVG(valor_tabela_fipe),
+    MIN(valor_tabela_fipe)
+FROM tbl_cadastro_veiculo
+GROUP BY marca;
+
+🔹 13. HAVING — Filtrar após o agrupamento
+HAVING MAX(valor_tabela_fipe) > 10000000;
+
+
+WHERE → antes do agrupamento
+HAVING → depois do agrupamento
+
+🔹 14. Consulta Completa (Tudo junto!)
+SELECT
+    MAX(valor_tabela_fipe) AS valor_max_fipe,
+    AVG(valor_tabela_fipe) AS valor_media_fipe,
+    MIN(valor_tabela_fipe) AS valor_min_fipe,
+    marca
+FROM tbl_cadastro_veiculo
+WHERE marca NOT IN ('Fiat', 'Audi', 'Ferrari')
+  AND ano BETWEEN 1990 AND 2022
+GROUP BY marca
+HAVING valor_max_fipe > 10000000
+ORDER BY valor_max_fipe DESC
+LIMIT 10;
