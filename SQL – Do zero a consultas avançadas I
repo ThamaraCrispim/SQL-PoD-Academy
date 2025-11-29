@@ -1,1 +1,32 @@
 
+Resumo — SQL | Aula 1 (PoD Academy)
+A Aula 1 apresenta os fundamentos essenciais do SQL, explicando desde o que é a linguagem até como realizar as primeiras consultas, aplicar filtros, ordenar dados, utilizar funções de agregação e trabalhar com agrupamentos.
+
+🔹 1. O que é SQL?
+SQL (Structured Query Language) é a linguagem usada para consultar, manipular e gerenciar dados em bancos de dados relacionais.
+Criada por Donald Chamberlin e Raymond Boyce na década de 1970, originalmente chamada SEQUEL.
+É utilizada em:
+- Engenharia de Dados
+- Ciência de Dados
+- Desenvolvimento
+- Business Intelligence
+- Áreas de negócio
+
+🔹2. Variações de SQL
+A sintaxe pode mudar entre sistemas como:
+-MySQL
+-SQL Server
+-Oracle
+
+Exemplos de diferenças:
+-Formatação de datas
+-Limite de linhas (LIMIT, TOP, ROWNUM)
+-Funções de texto
+-Obtenção da data atual
+🔹3. Tipos de Linguagem SQL
+
+DDL — Criar/alterar estruturas (CREATE, DROP, ALTER)
+DML — Manipular dados (INSERT, UPDATE, DELETE)
+DQL — Consultas (SELECT)
+DCL — Permissões (GRANT, REVOKE)
+TCL — Transações (COMMIT, ROLLBACK)
