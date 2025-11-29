@@ -47,3 +47,8 @@ Na aula, usamos um banco hospedado publicamente em MariaDB.
 
 🔹 6. Primeiras Consultas
 Selecionar colunas específicas:
+
+```SQL
+SELECT placa, marca, ano
+FROM tbl_cadastro_veiculo
+LIMIT 5;
