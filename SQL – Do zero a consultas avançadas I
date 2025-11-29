@@ -32,7 +32,6 @@ DCL — Permissões (GRANT, REVOKE)
 TCL — Transações (COMMIT, ROLLBACK)
 
 🔹4. Estrutura do Banco de Dados
-
 Termos importantes:
 - Database → conjunto de tabelas
 - Tabela → estrutura com colunas e registros
@@ -40,11 +39,11 @@ Termos importantes:
 - Registro (linha) → entrada de dados
 
 🔹 5. Ferramenta usada: DBeaver
-
 É utilizado para:
 Criar conexões com bancos
 Visualizar tabelas
 Executar consultas
 Na aula, usamos um banco hospedado publicamente em MariaDB.
 
-Valor → célula
+🔹 6. Primeiras Consultas
+Selecionar colunas específicas:
