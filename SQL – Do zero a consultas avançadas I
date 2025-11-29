@@ -23,10 +23,28 @@ Exemplos de diferenças:
 -Limite de linhas (LIMIT, TOP, ROWNUM)
 -Funções de texto
 -Obtenção da data atual
-🔹3. Tipos de Linguagem SQL
 
+🔹3. Tipos de Linguagem SQL
 DDL — Criar/alterar estruturas (CREATE, DROP, ALTER)
 DML — Manipular dados (INSERT, UPDATE, DELETE)
 DQL — Consultas (SELECT)
 DCL — Permissões (GRANT, REVOKE)
 TCL — Transações (COMMIT, ROLLBACK)
+
+🔹4. Estrutura do Banco de Dados
+
+Termos importantes:
+- Database → conjunto de tabelas
+- Tabela → estrutura com colunas e registros
+- Coluna → campo
+- Registro (linha) → entrada de dados
+
+🔹 5. Ferramenta usada: DBeaver
+
+É utilizado para:
+Criar conexões com bancos
+Visualizar tabelas
+Executar consultas
+Na aula, usamos um banco hospedado publicamente em MariaDB.
+
+Valor → célula
