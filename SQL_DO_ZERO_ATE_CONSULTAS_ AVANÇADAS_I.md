@@ -60,3 +60,14 @@ Server: relational.fel.cvut.cz
 Port:   3306  
 User:   guest  
 Pass:   ctu-relational
+
+## 5. Primeiras Consultas (SELECT)
+
+Comandos básicos para ler dados.
+*Nota: Use sempre comandos em Inglês (`SELECT`, `FROM`).*
+
+**Selecionando colunas específicas:**
+```sql
+SELECT placa, marca, ano
+FROM tbl_cadastro_veiculo
+LIMIT 5;
