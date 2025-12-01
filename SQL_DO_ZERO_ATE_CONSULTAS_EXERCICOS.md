@@ -17,3 +17,11 @@ DESCRIBE employees;
 **Print do resultado no mysql:**
 
 ![Descrição da tabela employees](https://raw.githubusercontent.com/ThamaraCrispim/SQL-PoD-Academy/main/imagens/Lista1-exercicio1.png)
+
+## 2. Quais são as tabelas disponíveis no database `employees`?
+
+### **Comando SQL utilizado:**
+```sql
+SELECT * FROM Employyes;
+```
+![Descrição da tabela employeesI]()
