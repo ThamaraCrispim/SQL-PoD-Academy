@@ -51,23 +51,63 @@ O comando mais usado para análise.
 
 ---
 
-## 4. Ferramenta: DBeaver
-Software universal para administração de bancos de dados.
-* **Conexão utilizada na aula:**
+## 4. DBeaver – Ferramenta da Aula
 
-```text
-Server: relational.fel.cvut.cz  
-Port:   3306  
-User:   guest  
-Pass:   ctu-relational
+DBeaver é um software de administração de banco de dados usado para:
+- Criar conexões
+- Visualizar tabelas e colunas
+- Executar consultas SQL
+
+Na aula, utilizou-se o servidor:
+
+Host: relational.fel.cvut.cz  
+Port: 3306  
+User: guest  
+Pass: ctu-relational
+
+---
 
 ## 5. Primeiras Consultas (SELECT)
 
-Comandos básicos para ler dados.
-*Nota: Use sempre comandos em Inglês (`SELECT`, `FROM`).*
+Comandos básicos para ler dados.  
+Nota: use sempre comandos em inglês (`SELECT`, `FROM`).
 
-**Selecionando colunas específicas:**
+Selecionando colunas específicas:
 ```sql
 SELECT placa, marca, ano
 FROM tbl_cadastro_veiculo
 LIMIT 5;
+```
+
+---
+
+## 6. Tipos de Dados
+
+Os principais tipos de dados encontrados nos bancos.
+
+**Numéricos:**
+- INT (inteiro)
+- FLOAT / DECIMAL (com casas decimais)
+
+**Texto:**
+- VARCHAR (texto variável)
+- CHAR (texto fixo)
+- TEXT (textos longos)
+
+**Datas:**
+- DATE (data)
+- DATETIME (data e hora)
+
+---
+
+## 7. Ordenação (ORDER BY)
+
+Comando para organizar a visualização dos dados.
+
+Ordenando do maior para o menor (Decrescente):
+```sql
+SELECT placa, marca, ano
+FROM tbl_cadastro_veiculo
+ORDER BY ano DESC
+LIMIT 10;
+```
