@@ -24,4 +24,6 @@ DESCRIBE employees;
 ```sql
 SELECT * FROM Employyes;
 ```
-![Descrição da tabela employeesI]()
+**Print do resultado no mysql:*
+
+![Descrição da tabela employeesI](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista1-exercicios2.png)
