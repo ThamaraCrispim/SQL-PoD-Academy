@@ -52,7 +52,7 @@ LIMIT 10;
 
 
 ![exercicio3](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio4.png)
-## Consultando a tabela `employees`, qual a data mais antiga de contratação (`hire_date`)?
+## 5.Consultando a tabela `employees`, qual a data mais antiga de contratação (`hire_date`)?
 
 ### **Comando SQL utilizado:**
 ```sql
