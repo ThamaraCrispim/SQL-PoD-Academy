@@ -16,4 +16,4 @@ DESCRIBE employees;
 
 **Print do resultado no mysql:**
 
-<img width="435" height="194" src="https://github.com/user-attachments/assets/3ac13776-73e4-4c8d-bd7e-dcef721d0f7e" />
+![Descrição da tabela employees](https://raw.githubusercontent.com/ThamaraCrispim/SQL-PoD-Academy/main/imagens/Lista1-exercicio1.png)
