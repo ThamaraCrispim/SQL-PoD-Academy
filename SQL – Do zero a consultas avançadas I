@@ -1,135 +1,107 @@
 # 📘 Resumo – SQL | Aula 1 (Academia PoD)
 
-A Aula 1 apresenta os fundamentos essenciais da linguagem SQL, mostrando desde o que é um banco de dados relacional até como realizar as primeiras consultas, aplicar filtros, operadores, ordenações e funções de agregação.
+A **Aula 1** apresenta os fundamentos essenciais da linguagem SQL, abrangendo desde o conceito de bancos relacionais até a construção de consultas completas com filtros, ordenações e agregações.
 
 ---
 
 ## 1. O que é SQL?
+**SQL** (*Structured Query Language*) é a linguagem padrão para consultar, manipular e gerenciar dados em Bancos de Dados Relacionais.
 
-SQL (*Structured Query Language*) é uma linguagem utilizada para consultar, manipular e gerenciar dados em bancos de dados relacionais.
-
-Criada na década de 1970 por Donald Chamberlin e Raymond Boyce (IBM), era inicialmente chamada **SEQUEL**.
-
-SQL é amplamente usada em:
-- Engenharia de Dados
-- Ciência de Dados
-- Desenvolvimento
-- BI (Business Intelligence)
-- Áreas de negócio
+* **História:** Criada na década de 70 (IBM) por Donald Chamberlin e Raymond Boyce. Inicialmente chamada de **SEQUEL**.
+* **Aplicações:** Engenharia de Dados, Ciência de Dados, Desenvolvimento Web, BI e Áreas de Negócio.
 
 ---
 
-## 2. Variações de SQL
+## 2. Variações de SQL (Dialetos)
+Embora exista um padrão (ANSI SQL), cada SGBD (Sistema Gerenciador de Banco de Dados) possui particularidades na sintaxe.
 
-Apesar do padrão SQL, cada SGBD possui pequenas diferenças de sintaxe, por exemplo:
-- Formatação de datas
-- Limite de linhas (LIMIT/TOP/ROWNUM)
-- Funções específicas
-- Criação de tabelas
-- Permissões
+**Exemplo de variação para limitar linhas:**
 
-Exemplo de variação:
-
-| Função | MySQL | SQL Server | Oracle |
-|-------|--------|------------|--------|
-| Limitar linhas | `LIMIT 5` | `TOP 5` | `ROWNUM <= 5` |
+| Função | MySQL | SQL Server | Oracle | SQLite/Postgres |
+| :--- | :--- | :--- | :--- | :--- |
+| **Limitar linhas** | `LIMIT 5` | `TOP 5` | `ROWNUM <= 5` | `LIMIT 5` |
 
 ---
 
-## 3. Tipos de Linguagem SQL
+## 3. Os 5 Tipos de Comandos SQL
 
-### **DDL – Data Definition Language**
-Comandos para criar ou alterar estruturas:
-- `CREATE`
-- `ALTER`
-- `DROP`
+### 🛠️ DDL – Data Definition (Estrutura)
+Comandos para criar ou alterar a estrutura do banco.
+* `CREATE` (Criar)
+* `ALTER` (Alterar)
+* `DROP` (Excluir estrutura)
 
-### **DML – Data Manipulation Language**
-Comandos para manipular dados:
-- `INSERT`
-- `UPDATE`
-- `DELETE`
+### 📝 DML – Data Manipulation (Dados)
+Comandos para mexer nos dados dentro das tabelas.
+* `INSERT` (Inserir)
+* `UPDATE` (Atualizar)
+* `DELETE` (Deletar dados)
 
-### **DQL – Data Query Language**
-- `SELECT`
+### 🔍 DQL – Data Query (Consulta)
+O comando mais usado para análise.
+* `SELECT` (Selecionar/Ler)
 
-### **DCL – Data Control Language**
-- `GRANT`
-- `REVOKE`
+### 🔐 DCL – Data Control (Permissões)
+* `GRANT` (Dar permissão)
+* `REVOKE` (Retirar permissão)
 
-### **TCL – Transaction Control Language**
-- `COMMIT`
-- `ROLLBACK`
-- `SAVEPOINT`
+### 💾 TCL – Transaction Control (Transação)
+* `COMMIT` (Salvar definitivo)
+* `ROLLBACK` (Desfazer)
 
 ---
 
-## 4. DBeaver – Ferramenta da Aula
+## 4. Ferramenta: DBeaver
+Software universal para administração de bancos de dados.
+* **Conexão utilizada na aula:**
 
-DBeaver é um software de administração de banco de dados usado para:
-- Criar conexões
-- Visualizar tabelas e colunas
-- Executar consultas SQL
-
-Na aula, utilizou-se o server:
-```
+```text
 Server: relational.fel.cvut.cz  
-Port: 3306  
-User: guest  
-Pass: ctu-relational
+Port:   3306  
+User:   guest  
+Pass:   ctu-relational
 ```
 
 ---
 
 ## 5. Primeiras Consultas (SELECT)
 
-Selecionando colunas específicas:
+Estrutura básica de uma consulta:
 
+**Selecionando colunas específicas:**
 ```sql
 SELECT placa, marca, ano
 FROM tbl_cadastro_veiculo
 LIMIT 5;
 ```
 
-Selecionando todas as colunas:
+**Selecionando TUDO (`*`):**
 ```sql
 SELECT *
 FROM tbl_cadastro_veiculo
 LIMIT 5;
 ```
 
-Significado dos comandos:
-- `SELECT`: o que quero ver
-- `FROM`: onde estão os dados
-- `LIMIT`: limite de registros retornados
+> **Dicionário:**
+> * `SELECT`: Quais colunas eu quero ver?
+> * `FROM`: De qual tabela?
+> * `LIMIT`: Quantas linhas retornar?
 
 ---
 
-## 6. Tipos de Dados
+## 6. Tipos de Dados Comuns
 
-### Numéricos
-- `INT`
-- `BIGINT`
-- `FLOAT`
-- `DOUBLE`
-- `DECIMAL`
-
-### Textuais
-- `CHAR`
-- `VARCHAR`
-- `TEXT`
-- `LONGTEXT`
-
-### Datas
-- `DATE`
-- `DATETIME`
-- `TIMESTAMP`
-- `YEAR`
-- `TIME`
+| Categoria | Tipos Principais |
+| :--- | :--- |
+| **Numéricos** | `INT`, `BIGINT`, `FLOAT`, `DOUBLE`, `DECIMAL` |
+| **Texto** | `CHAR`, `VARCHAR`, `TEXT`, `LONGTEXT` |
+| **Data/Hora** | `DATE`, `DATETIME`, `TIMESTAMP`, `YEAR`, `TIME` |
 
 ---
 
-## 7. Ordenação – ORDER BY
+## 7. Ordenação (ORDER BY)
+
+Organiza o resultado da consulta.
 
 ```sql
 SELECT placa, marca, ano
@@ -137,112 +109,98 @@ FROM tbl_cadastro_veiculo
 ORDER BY ano DESC
 LIMIT 10;
 ```
-
-- `ASC`: crescente (padrão)
-- `DESC`: decrescente
-
----
-
-## 8. Principais Operadores
-
-### Aritméticos
-`+`, `-`, `*`, `/`, `%`
-
-### Comparação
-`=`, `<`, `>`, `<=`, `>=`, `!=`, `<>`
-
-### Lógicos
-- `AND`
-- `OR`
-- `NOT`
-- `IN`
-- `BETWEEN`
-- `LIKE`
-- `EXISTS`
+* **`ASC`**: Crescente (A-Z, 0-9) - *Padrão se não especificar*.
+* **`DESC`**: Decrescente (Z-A, 9-0).
 
 ---
 
-## 9. Filtros – WHERE
+## 8. Operadores
 
+### ➗ Aritméticos
+`+` (Soma), `-` (Subtração), `*` (Multiplicação), `/` (Divisão), `%` (Módulo/Resto)
+
+### ⚖️ Comparação
+`=` (Igual), `<` (Menor), `>` (Maior), `<=` (Menor igual), `>=` (Maior igual), `!=` ou `<>` (Diferente)
+
+### 🧠 Lógicos
+* `AND` (E)
+* `OR` (OU)
+* `NOT` (NÃO)
+* `IN` (Lista de valores)
+* `BETWEEN` (Entre faixa de valores)
+* `LIKE` (Busca por padrão de texto)
+
+---
+
+## 9. Filtros (WHERE)
+
+O `WHERE` filtra as **linhas** antes de qualquer agrupamento.
+
+**Filtro simples:**
 ```sql
-SELECT *
-FROM tbl_cadastro_veiculo
+SELECT * FROM tbl_cadastro_veiculo
 WHERE marca = 'Fiat';
 ```
 
-Com múltiplas condições:
+**Múltiplas condições (AND / OR):**
 ```sql
-WHERE marca = 'Fiat' AND ano = 2023;
+WHERE marca = 'Fiat' AND ano = 2023; -- As duas condições devem ser verdadeiras
+WHERE marca = 'Fiat' OR ano = 2023;  -- Pelo menos uma deve ser verdadeira
 ```
 
-Usando OR:
+**Padrões de texto (LIKE):**
 ```sql
-WHERE marca = 'Fiat' OR ano = 2023;
+WHERE marca LIKE 'Aston%'; -- Começa com "Aston" (ex: Aston Martin)
 ```
 
-Usando padrões:
+**Listas (IN) e Faixas (BETWEEN):**
 ```sql
-WHERE marca LIKE 'Aston%';
-```
-
-Usando IN:
-```sql
-WHERE marca IN ('Fiat','Audi','Ferrari');
-```
-
-Usando BETWEEN:
-```sql
+WHERE marca IN ('Fiat', 'Audi', 'Ferrari');
 WHERE valor BETWEEN 2000000 AND 3000000;
 ```
 
 ---
 
 ## 10. Funções de Agregação
+Funções que resumem vários dados em um só valor.
 
-- `COUNT()`: conta registros
-- `SUM()`: soma
-- `AVG()`: média
-- `MAX()`: maior valor
-- `MIN()`: menor valor
-
-Exemplos:
+* `COUNT(*)`: Conta linhas.
+* `SUM(coluna)`: Soma valores.
+* `AVG(coluna)`: Média.
+* `MAX(coluna)`: Maior valor.
+* `MIN(coluna)`: Menor valor.
 
 ```sql
-SELECT MAX(valor_tabela_fipe) FROM tbl_cadastro_veiculo;
-SELECT SUM(valor_tabela_fipe) FROM tbl_cadastro_veiculo;
-SELECT COUNT(placa) FROM tbl_cadastro_veiculo;
+SELECT 
+    COUNT(placa) as total_carros,
+    MAX(valor_tabela_fipe) as carro_mais_caro
+FROM tbl_cadastro_veiculo;
 ```
 
 ---
 
-## 11. GROUP BY (Agrupamento)
+## 11. Agrupamento (GROUP BY)
+Obrigatório quando usamos funções de agregação junto com colunas normais.
+
+```sql
+SELECT 
+    marca,
+    MAX(valor_tabela_fipe) as valor_maximo,
+    AVG(valor_tabela_fipe) as valor_medio,
+    MIN(valor_tabela_fipe) as valor_minimo
+FROM tbl_cadastro_veiculo
+GROUP BY marca;
+```
+
+---
+
+## 12. Filtro Pós-Agregação (HAVING)
+Diferença chave:
+* `WHERE`: Filtra linhas **antes** de agrupar.
+* `HAVING`: Filtra o resultado **depois** de agrupar (ex: filtrar pela média ou soma).
 
 ```sql
 SELECT marca, MAX(valor_tabela_fipe)
-FROM tbl_cadastro_veiculo
-GROUP BY marca;
-```
-
-Múltiplas agregações:
-
-```sql
-SELECT
-    marca,
-    MAX(valor_tabela_fipe),
-    AVG(valor_tabela_fipe),
-    MIN(valor_tabela_fipe)
-FROM tbl_cadastro_veiculo
-GROUP BY marca;
-```
-
----
-
-## 12. HAVING (Filtro após agregação)
-
-```sql
-SELECT
-    marca,
-    MAX(valor_tabela_fipe)
 FROM tbl_cadastro_veiculo
 GROUP BY marca
 HAVING MAX(valor_tabela_fipe) > 10000000;
@@ -250,23 +208,21 @@ HAVING MAX(valor_tabela_fipe) > 10000000;
 
 ---
 
-## 13. Consulta Completa – Tudo junto
+## 13. 🏆 A Consulta Completa
+
+A união de todos os conceitos na ordem correta de sintaxe:
 
 ```sql
 SELECT
+    marca,
     MAX(valor_tabela_fipe) AS valor_max_fipe,
     AVG(valor_tabela_fipe) AS valor_media_fipe,
-    MIN(valor_tabela_fipe) AS valor_min_fipe,
-    marca
+    MIN(valor_tabela_fipe) AS valor_min_fipe
 FROM tbl_cadastro_veiculo
-WHERE marca NOT IN ('Fiat','Audi','Ferrari')
+WHERE marca NOT IN ('Fiat', 'Audi', 'Ferrari')  -- 1. Filtra linhas
   AND ano BETWEEN 1990 AND 2022
-GROUP BY marca
-HAVING valor_max_fipe > 10000000
-ORDER BY valor_max_fipe DESC
-LIMIT 10;
+GROUP BY marca                                  -- 2. Agrupa
+HAVING MAX(valor_tabela_fipe) > 10000000        -- 3. Filtra grupos
+ORDER BY valor_max_fipe DESC                    -- 4. Ordena
+LIMIT 10;                                       -- 5. Limita
 ```
-
----
-
-
