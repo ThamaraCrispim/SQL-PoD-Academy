@@ -27,3 +27,13 @@ SELECT * FROM Employyes;
 **Print do resultado no mysql:*
 
 ![Descrição da tabela employeesI](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista1-exercicios2.png)
+
+## 3. Realize uma consulta na tabela `employees` selecionando todas as colunas e limitando o retorno em 20 registros.
+
+### **Comando SQL utilizado:**
+```sql
+SELECT * FROM employees
+LIMIT 20;
+```
+**Print do resultado no mysql:*
+![exercicio3](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio3.png)
