@@ -49,4 +49,6 @@ ORDER BY birth_date DESC
 LIMIT 10;
 ```
 ***Print do resultado no mysql**
+
+
 ![exercicio3](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio4.png)
