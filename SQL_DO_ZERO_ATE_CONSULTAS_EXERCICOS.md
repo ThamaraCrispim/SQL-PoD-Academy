@@ -57,9 +57,10 @@ LIMIT 10;
 ### **Comando SQL utilizado:**
 ```sql
 SELECT first_name, last_name, hire_date
-```
-***Print do resultado no mysql***
-![exercicio05](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista1-exercicio5.png)
 FROM employees
 ORDER BY hire_date ASC
 LIMIT 1;
+```
+***Print do resultado no mysql***
+![exercicio05](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista1-exercicio5.png)
+
