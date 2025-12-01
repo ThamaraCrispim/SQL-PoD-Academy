@@ -78,4 +78,17 @@ WHERE gender = 'F'
 ***Print do resultado no mysql***
 
 
-![exercicio05](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio6.png)
+![exercicio06](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio6.png)
+
+## 7. Consultando a tabela `employees`, existem mais funcionários do sexo feminino ou masculino?
+
+### **Comando SQL utilizado:**
+```sql
+SELECT gender, COUNT(*) AS total
+FROM employees
+GROUP BY gender;
+ ```
+***Print do resultado no mysql***
+
+
+![exercicio07](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio7.png)
