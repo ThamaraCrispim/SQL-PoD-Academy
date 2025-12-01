@@ -36,4 +36,5 @@ SELECT * FROM employees
 LIMIT 20;
 ```
 **Print do resultado no mysql:*
+
 ![exercicio3](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio3.png)
