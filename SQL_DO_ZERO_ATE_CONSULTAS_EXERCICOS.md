@@ -38,3 +38,15 @@ LIMIT 20;
 **Print do resultado no mysql:*
 
 ![exercicio3](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio3.png)
+## 4. Realize uma consulta na tabela `employees` selecionando as colunas `first_name`, `last_name`, `birth_date`, ordenando pelo `birth_date` de maneira decrescente e limitando o retorno em 10 registros.  
+Baseando-se na data de nascimento, qual o nome do(s) funcionário(s) mais novo(s)?
+
+### **Comando SQL utilizado:**
+```sql
+SELECT first_name, last_name, birth_date
+FROM employees
+ORDER BY birth_date DESC
+LIMIT 10;
+```
+***Print do resultado no mysql**
+![exercicio3](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio4.png)
