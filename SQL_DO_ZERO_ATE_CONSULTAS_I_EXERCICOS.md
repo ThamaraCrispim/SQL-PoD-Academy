@@ -92,3 +92,17 @@ GROUP BY gender;
 
 
 ![exercicio07](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio7.png)
+
+
+## 8. Consultando a tabela `titles`, qual a quantidade de registros?
+
+### **Comando SQL utilizado:**
+```sql
+SELECT COUNT(*) AS total
+FROM titles;
+```
+
+***Print do resultado no mysql***
+
+
+![exercicio08](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lISTA1-exercicio8.png)
