@@ -66,3 +66,16 @@ LIMIT 1;
 
 ![exercicio05](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista1-exercicio5.png)
 
+## 6 Consultando a tabela `employees`, qual a quantidade de funcionários do sexo feminino que foram contratados depois da data `1990-12-02`?
+
+### **Comando SQL utilizado:**
+```sql
+SELECT COUNT(*) AS total_feminino_contratado
+FROM employees
+WHERE gender = 'F'
+  AND hire_date > '1990-12-02';
+  ```
+***Print do resultado no mysql***
+
+
+![exercicio05](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio6.png)
