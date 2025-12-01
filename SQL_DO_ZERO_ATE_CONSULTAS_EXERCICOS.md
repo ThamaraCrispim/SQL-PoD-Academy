@@ -62,5 +62,7 @@ ORDER BY hire_date ASC
 LIMIT 1;
 ```
 ***Print do resultado no mysql***
+
+
 ![exercicio05](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista1-exercicio5.png)
 
