@@ -106,3 +106,19 @@ FROM titles;
 
 
 ![exercicio08](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lISTA1-exercicio8.png)
+
+## 9. Consultando a tabela `salaries`, qual o salário mais alto? o mais baixo? e qual a média?
+
+### **Comando SQL utilizado:**
+```sql
+SELECT 
+    MIN(salary) AS salario_minimo,
+    MAX(salary) AS salario_maximo,
+    AVG(salary) AS salario_medio
+FROM salaries;
+```
+***Print do resultado no mysql***
+
+
+![exercicio09](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista1-exercicio9.png)
+
