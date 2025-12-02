@@ -14,14 +14,7 @@ Este repositório reúne **aulas, exercícios, anotações e projetos**, servind
 - **/projetos** → Projetos desenvolvidos ao longo da formação  
 - **/datasets** → Bases de dados utilizadas (quando permitido)
 
----
 
-## 🔧 **Tecnologias e Ferramentas**
-- **MySQL**
-- **MySQL Workbench**  
-- Conceitos fundamentais de **Modelagem**, **Manipulação de Dados (DML)**, **Criação de Estruturas (DDL)** e **Consultas Avançadas**
-
----
 
 ##Objetivo
 
