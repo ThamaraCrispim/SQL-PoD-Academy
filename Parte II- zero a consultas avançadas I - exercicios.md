@@ -47,7 +47,7 @@ limit 5
 ### **Comando SQL utilizado: Banco de dados artist**
 
 ```sql
-select * from astist
+select * from artist
 limit 5
 ```
 ![exercicio4.1](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista%202%20-%20quest%C3%A3o%204.1.png)
