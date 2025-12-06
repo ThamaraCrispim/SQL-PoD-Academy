@@ -32,5 +32,20 @@ WHERE Company IS NULL
 
 ## Questão 4. 
 
-Um cliente reclamou de uma nota fiscal gerada, ele informou que o número da nota era 10 e ele pede pra confirmar todas as músicas que
-ele comprou, pode gerar uma consulta com os campos : Nome do Cliente, Número da Nota , Música , Preço Unitário ? 
+Liste todos os álbuns cadastrados no banco de dados junto com o nome do artista responsável.
+Exiba na consulta os campos: ID do Álbum, Título do Álbum e Nome do Artista.
+
+### **Comando SQL utilizado:**
+
+```sql
+SELECT 
+    a.AlbumId,
+    a.Title,
+    b.Name AS ArtistName
+FROM album a
+INNER JOIN artist b 
+    ON a.ArtistId = b.ArtistId;
+
+```
+***Print do resultado no mysql**
+![exercicio3.1](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista%202%20-%20quest%C3%A3o%204.png)
