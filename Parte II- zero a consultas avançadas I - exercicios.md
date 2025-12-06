@@ -39,15 +39,15 @@ Exiba na consulta os campos: ID do Álbum, Título do Álbum e Nome do Artista.
 ### **Comando SQL utilizado: Banco de dados album**
 
 ```sql
-select * from artist
+select * from album
 limit 5
 ```
 ![exercicio4.2](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/lista%202%20-%20quest%C3%A3o%204.2.png)
 
-### **Comando SQL utilizado: Banco de dados album**
+### **Comando SQL utilizado: Banco de dados artist**
 
 ```sql
-select * from album
+select * from astist
 limit 5
 ```
 ![exercicio4.1](https://github.com/ThamaraCrispim/SQL-PoD-Academy/blob/main/imagens/Lista%202%20-%20quest%C3%A3o%204.1.png)
