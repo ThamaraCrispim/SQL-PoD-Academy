@@ -1,6 +1,4 @@
 # 📚 Aula 1 – Introdução ao SQL  
-Documentação completa baseada nos slides + conteúdo complementar.
-
 ---
 
 # 🧠 O que é SQL?
